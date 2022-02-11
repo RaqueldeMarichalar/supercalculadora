@@ -13,7 +13,8 @@ public class Supercalculadora {
             double res;
             double numA, numB, numC;
             String signo;
-            int opcion = 0, opcionEcuaciones = 0;
+            int opcion = 0, opcionEcuaciones = 0, opcionPoligonos = 0;
+            double altura, area;
 
             // Menú
             while (opcion != 5) {
@@ -89,6 +90,57 @@ public class Supercalculadora {
                     case 3:
                         System.out.println("Elige entre los siguientes polígonos para conocer su área: ");
                         System.out.println("Cuadrado (1), triángulo (2),círculo (3),hexágono(4),rectángulo (5)");
+                        opcionPoligonos = s.nextInt();
+
+                        switch(opcionPoligonos){
+                            case 1:
+                                System.out.print("Introduce un valor para lado: ");
+                                double ladoC = s.nextDouble();
+                                cuadrado cuadradoC = new cuadrado(ladoC);
+                                area = cuadradoC.area();
+                                System.out.println("El cuadrado tiene un área de " + area + "cm2");
+                                break;
+
+                            case 2:
+                                System.out.print("Introduce un valor para lado: ");
+                                double ladoT = s.nextDouble();
+                                System.out.print("Introduce un valor para altura: ");
+                                altura = s.nextDouble();
+                                triangulo trianguloT = new triangulo(ladoT, altura);
+                                area = trianguloT.area();
+                                System.out.println("El triángulo tiene un área de " + area + "cm2");
+                                break;
+
+                            case 3:
+                                System.out.print("Introduce un valor para radio: ");
+                                double radio = s.nextDouble();
+                                circulo circuloC = new circulo(radio);
+                                area = circuloC.area();
+                                System.out.println("El círculo tiene un área de " + area + "cm2");                          
+                                break;
+
+                            case 4:
+                                System.out.print("Introduce un valor para lado: ");
+                                double ladoH = s.nextDouble();
+                                hexagono hexagonoH = new hexagono(ladoH);
+                                area = hexagonoH.area();
+                                System.out.println("El hexágono tiene un área de " + area + "cm2");                 
+                                break;
+
+                            case 5:
+                                System.out.print("Introduce un valor para lado: ");
+                                double ladoR = s.nextDouble();
+                                System.out.print("Introduce un valor para altura: ");
+                                altura = s.nextDouble();
+                                rectangulo rectanguloR = new rectangulo(ladoR, altura);
+                                area = rectanguloR.area();
+                                System.out.println("El rectángulo tiene un área de " + area + "cm2");                 
+                                break;
+
+                            default:
+
+                                System.out.println("Lo siento, no has introducido una opción existente.");
+                        }
 
                         break;
 
