@@ -1,6 +1,7 @@
 package com.grupomixto;
 
 import java.util.Scanner;
+import com.grupomixto.aritmeticaBasica;
 
 /** Inicio codificación: RMA 10/02/2022 **/
 
@@ -11,7 +12,7 @@ public class Supercalculadora {
         try (Scanner s = new Scanner(System.in)) {
             // Variables
             double res;
-            double numA, numB, numC;
+            int numA, numB, numC;
             String signo;
             int opcion = 0, opcionEcuaciones = 0, opcionPoligonos = 0;
             double altura, area;
@@ -35,9 +36,9 @@ public class Supercalculadora {
                     case 1:
 
                         System.out.println("introduce el primer número:  ");
-                        numA = s.nextDouble();
+                        numA = s.nextInt();
                         System.out.println("introduce el segundo número: ");
-                        numB = s.nextDouble();
+                        numB = s.nextInt();
                         System.out.println(
                                 "¿Qúé operación quieres realizar suma(+),resta(-),division(/) o multiplicación(*)?");
                         signo = s.next();
@@ -45,23 +46,22 @@ public class Supercalculadora {
                         switch (signo) {
 
                             case "+":
-                                res = numA + numB;
-                                System.out.println("Resultado: " + res);
+                                System.out.println("Resultado: " + aritmeticaBasica.suma(numA, numB));
                                 break;
 
                             case "-":
-                                res = numA - numB;
-                                System.out.println("Resultado: " + res);
+
+                                System.out.println("Resultado: " + aritmeticaBasica.resta(numA, numB));
                                 break;
 
                             case "*":
-                                res = numA * numB;
-                                System.out.println("Resultado: " + res);
+
+                                System.out.println("Resultado: " + aritmeticaBasica.multiplicacion(numA, numB));
                                 break;
 
                             case "/":
-                                res = numA / numB;
-                                System.out.println("Resultado: " + res);
+
+                                System.out.println("Resultado: " + aritmeticaBasica.division(numA, numB));
                                 break;
 
                             default:
@@ -76,12 +76,12 @@ public class Supercalculadora {
                     case 2:
                         System.out.println("Introduce las medidas de los catetos para averiguar la hipotenusa: ");
                         System.out.println("Introduce medidas del cateto A: ");
-                        numA = s.nextDouble();
+                        numA = s.nextInt();
 
                         System.out.println("Introduce medidas del cateto B: ");
-                        numB = s.nextDouble();
+                        numB = s.nextInt();
 
-                        numC = Math.pow(numA, 2) + Math.pow(numB, 2);
+                        numC = (int) (Math.pow(numA, 2) + Math.pow(numB, 2));
                         res = Math.sqrt(numC);
 
                         System.out.println("El resultado es: " + res);
@@ -92,7 +92,7 @@ public class Supercalculadora {
                         System.out.println("Cuadrado (1), triángulo (2),círculo (3),hexágono(4),rectángulo (5)");
                         opcionPoligonos = s.nextInt();
 
-                        switch(opcionPoligonos){
+                        switch (opcionPoligonos) {
                             case 1:
                                 System.out.print("Introduce un valor para lado: ");
                                 double ladoC = s.nextDouble();
@@ -116,7 +116,7 @@ public class Supercalculadora {
                                 double radio = s.nextDouble();
                                 circulo circuloC = new circulo(radio);
                                 area = circuloC.area();
-                                System.out.println("El círculo tiene un área de " + area + "cm2");                          
+                                System.out.println("El círculo tiene un área de " + area + "cm2");
                                 break;
 
                             case 4:
@@ -124,7 +124,7 @@ public class Supercalculadora {
                                 double ladoH = s.nextDouble();
                                 hexagono hexagonoH = new hexagono(ladoH);
                                 area = hexagonoH.area();
-                                System.out.println("El hexágono tiene un área de " + area + "cm2");                 
+                                System.out.println("El hexágono tiene un área de " + area + "cm2");
                                 break;
 
                             case 5:
@@ -134,7 +134,7 @@ public class Supercalculadora {
                                 altura = s.nextDouble();
                                 rectangulo rectanguloR = new rectangulo(ladoR, altura);
                                 area = rectanguloR.area();
-                                System.out.println("El rectángulo tiene un área de " + area + "cm2");                 
+                                System.out.print("\nEl rectángulo tiene un área de " + area + "cm2");
                                 break;
 
                             default:
@@ -153,9 +153,9 @@ public class Supercalculadora {
                             case 1:
 
                                 System.out.println(" Escribe el primer valor: ");
-                                numA = s.nextDouble();
+                                numA = s.nextInt();
                                 System.out.println(" Escribe el segundo valor: ");
-                                numB = s.nextDouble();
+                                numB = s.nextInt();
 
                                 res = -numB / numA;
 
@@ -164,11 +164,11 @@ public class Supercalculadora {
                             case 2:
 
                                 System.out.println(" Escribe el primer valor: ");
-                                numA = s.nextDouble();
+                                numA = s.nextInt();
                                 System.out.println(" Escribe el segundo valor: ");
-                                numB = s.nextDouble();
+                                numB = s.nextInt();
                                 System.out.println(" Escribe el tercer valor: ");
-                                numC = s.nextDouble();
+                                numC = s.nextInt();
 
                                 res = Math.pow(numB, 2) - (4 * numA * numC);
                                 if (res < 0) {
