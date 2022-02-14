@@ -52,4 +52,26 @@ public class AritmeticaTest {
         assertThat(getOutput(), containsString("Resultado: 20"));
         //
     }
+
+    @Test
+    @DisplayName("Test entrada a Menú de Aritmética, opción multiplicación")
+    public void AritmeticaTestMultiplicacion() {
+
+        provideInput("1\n*\n9\n1\n5");
+
+        Supercalculadora.main(new String[0]);
+        assertThat(getOutput(), containsString("Resultado:9 "));
+        //
+    }
+
+    @Test
+    @DisplayName("Test entrada a Menú de Aritmética, opción division")
+    public void AritmeticaTestDivision() {
+
+        provideInput("1\n/\n10\n2\n5");
+
+        Supercalculadora.main(new String[0]);
+        assertThat(getOutput(), containsString("Resultado:5 "));
+        //
+    }
 }
