@@ -1,7 +1,6 @@
 package com.grupomixto;
 
 import java.util.Scanner;
-import com.grupomixto.aritmeticaBasica;
 
 /** Inicio codificación: RMA 10/02/2022 **/
 

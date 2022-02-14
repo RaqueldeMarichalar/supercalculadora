@@ -35,7 +35,7 @@ public class AritmeticaTest {
     @DisplayName("Test entrada a Menú de Aritmética, opción suma")
     public void AritmeticaTestSuma() {
 
-        provideInput("1\n+\n10\n33\n5");
+        provideInput("1\n10\n33\n+\n5");
 
         Supercalculadora.main(new String[0]);
         assertThat(getOutput(), containsString("Resultado: 43"));
@@ -46,7 +46,7 @@ public class AritmeticaTest {
     @DisplayName("Test entrada a Menú de Aritmética, opción resta")
     public void AritmeticaTestResta() {
 
-        provideInput("1\n-\n30\n10\n5");
+        provideInput("1\n30\n10\n-\n5");
 
         Supercalculadora.main(new String[0]);
         assertThat(getOutput(), containsString("Resultado: 20"));
@@ -57,10 +57,10 @@ public class AritmeticaTest {
     @DisplayName("Test entrada a Menú de Aritmética, opción multiplicación")
     public void AritmeticaTestMultiplicacion() {
 
-        provideInput("1\n*\n9\n1\n5");
+        provideInput("1\n9\n1\n*\n5");
 
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("Resultado:9 "));
+        assertThat(getOutput(), containsString("Resultado: 9"));
         //
     }
 
@@ -68,10 +68,10 @@ public class AritmeticaTest {
     @DisplayName("Test entrada a Menú de Aritmética, opción division")
     public void AritmeticaTestDivision() {
 
-        provideInput("1\n/\n10\n2\n5");
+        provideInput("1\n10\n2\n/\n5");
 
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("Resultado:5 "));
+        assertThat(getOutput(), containsString("Resultado: 5"));
         //
     }
 }
