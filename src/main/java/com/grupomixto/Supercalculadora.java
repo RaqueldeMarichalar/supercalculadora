@@ -155,8 +155,8 @@ public class Supercalculadora {
                                 numA = s.nextInt();
                                 System.out.println(" Escribe el segundo valor: ");
                                 numB = s.nextInt();
-
-                                res = -numB / numA;
+                                System.out.print("El resultado es: "+ ecuaciones.ecuacion1(numA, numB));
+                               
 
                                 break;
 
