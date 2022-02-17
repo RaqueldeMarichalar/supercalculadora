@@ -82,7 +82,6 @@ public class Supercalculadora {
 
                         System.out.println("El resultado es: " + Pitagoras.Teorema(numA, numB));
                         break;
-
                     case 3:
                         System.out.println("Elige entre los siguientes polígonos para conocer su área: ");
                         System.out.println("Cuadrado (1), triángulo (2),círculo (3),hexágono(4),rectángulo (5)");
@@ -182,7 +181,7 @@ public class Supercalculadora {
 
                                 }
 
-                                /** Fin codificación:RMA 10/02/2022 **/
+                                /** Fin codificación:RMA 17/02/2022 **/
                                 /** Fin codificación:LAE 10/02/2022 **/
 
                         }
