@@ -80,10 +80,7 @@ public class Supercalculadora {
                         System.out.println("Introduce medidas del cateto B: ");
                         numB = s.nextInt();
 
-                        numC = (int) (Math.pow(numA, 2) + Math.pow(numB, 2));
-                        res = Math.sqrt(numC);
-
-                        System.out.println("El resultado es: " + res);
+                        System.out.println("El resultado es: " + Pitagoras.Teorema(numA, numB));
                         break;
 
                     case 3:

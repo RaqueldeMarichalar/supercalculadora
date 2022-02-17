@@ -55,7 +55,7 @@ public class poligonosTest {
         provideInput("3\n2\n5\n4\n5");
         
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("10cm2" ));
+        assertThat(getOutput(), containsString("10.0cm2" ));
         
     }
 
@@ -66,7 +66,7 @@ public class poligonosTest {
         provideInput("3\n3\n5\n5");
         
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("78.53981633974483cm2" ));
+        assertThat(getOutput(), containsString("El círculo tiene un área de 78.53981633974483cm2" ));
         
     }
 
@@ -77,7 +77,7 @@ public class poligonosTest {
         provideInput("3\n4\n5\n5");
         
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("64.95cm2" ));
+        assertThat(getOutput(), containsString("El hexágono tiene un área de 64.95cm2" ));
         
     }
 
@@ -88,7 +88,7 @@ public class poligonosTest {
         provideInput("3\n5\n6\n5\n5");
         
         Supercalculadora.main(new String[0]);
-        assertThat(getOutput(), containsString("30.0cm2" ));
+        assertThat(getOutput(), containsString("El rectángulo tiene un área de 30.0cm2" ));
         
     }
 
