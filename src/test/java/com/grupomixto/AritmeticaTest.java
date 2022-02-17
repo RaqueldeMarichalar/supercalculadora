@@ -32,7 +32,7 @@ public class AritmeticaTest {
     }
 
     @Test
-    @DisplayName("Test entrada a Menú de Aritmética, opción suma")
+    @DisplayName("Test entrada a Menú de Aritmética, opción suma ")
     public void AritmeticaTestSuma() {
 
         provideInput("1\n10\n33\n+\n5");
