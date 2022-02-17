@@ -10,7 +10,7 @@ public class Supercalculadora {
 
         try (Scanner s = new Scanner(System.in)) {
             // Variables
-            double res;
+           
             int numA, numB, numC;
             String signo;
             int opcion = 0, opcionEcuaciones = 0, opcionPoligonos = 0;
@@ -38,8 +38,7 @@ public class Supercalculadora {
                         numA = s.nextInt();
                         System.out.println("introduce el segundo número: ");
                         numB = s.nextInt();
-                        System.out.println(
-                                "¿Qúé operación quieres realizar suma(+),resta(-),division(/) o multiplicación(*)?");
+                        System.out.println("¿Qué operación quieres realizar suma(+),resta(-),division(/) o multiplicación(*)?");
                         signo = s.next();
 
                         switch (signo) {
@@ -82,6 +81,8 @@ public class Supercalculadora {
 
                         System.out.println("El resultado es: " + Pitagoras.Teorema(numA, numB));
                         break;
+                    
+                    
                     case 3:
                         System.out.println("Elige entre los siguientes polígonos para conocer su área: ");
                         System.out.println("Cuadrado (1), triángulo (2),círculo (3),hexágono(4),rectángulo (5)");
@@ -142,7 +143,7 @@ public class Supercalculadora {
                     case 4:
                         System.out.println("Qué tipo de ecuación quieres resolver:  ");
                         System.out.println("Primer grado (1) o segundo grado (2)");
-
+                        opcionEcuaciones = s.nextInt();
                         switch (opcionEcuaciones) {
 
                             case 1:
@@ -151,9 +152,8 @@ public class Supercalculadora {
                                 numA = s.nextInt();
                                 System.out.println(" Escribe el segundo valor: ");
                                 numB = s.nextInt();
-                                System.out.print("El resultado es: "+ ecuaciones.ecuacion1(numA, numB));
+                                System.out.println("El resultado es: "+ ecuaciones.ecuacion1(numA, numB));
                                
-
                                 break;
 
                             case 2:
@@ -165,26 +165,17 @@ public class Supercalculadora {
                                 System.out.println(" Escribe el tercer valor: ");
                                 numC = s.nextInt();
 
-                                res = Math.pow(numB, 2) - (4 * numA * numC);
-                                if (res < 0) {
-                                    System.out.println("No existe solución posible.");
-
-                                } else {
-
-                                    res = -numB + Math.sqrt(res) / (2 * numA);
-                                    System.out.println("El resultado es : " + res);
-
-                                    res = Math.pow(numB, 2) - (4 * numA * numC);
-                                    res = -numB - Math.sqrt(res) / (2 * numA);
-
-                                    System.out.println("Y también: " + res);
-
-                                }
+                                System.out.println( "El resultado es: "+ ecuaciones.ecuacion2(numA, numB,numC));
+                                
+                                break;
 
                                 /** Fin codificación:RMA 17/02/2022 **/
                                 /** Fin codificación:LAE 10/02/2022 **/
+                             default:
+                             System.out.println("Lo siento, no has introducido un valor correcto.");
 
                         }
+                       
 
                 }
 
