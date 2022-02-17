@@ -10,7 +10,7 @@ public class Supercalculadora {
 
         try (Scanner s = new Scanner(System.in)) {
             // Variables
-           
+
             int numA, numB, numC;
             String signo;
             int opcion = 0, opcionEcuaciones = 0, opcionPoligonos = 0;
@@ -38,7 +38,8 @@ public class Supercalculadora {
                         numA = s.nextInt();
                         System.out.println("introduce el segundo número: ");
                         numB = s.nextInt();
-                        System.out.println("¿Qué operación quieres realizar suma(+),resta(-),division(/) o multiplicación(*)?");
+                        System.out.println(
+                                "¿Qué operación quieres realizar suma(+),resta(-),division(/) o multiplicación(*)?");
                         signo = s.next();
 
                         switch (signo) {
@@ -81,8 +82,7 @@ public class Supercalculadora {
 
                         System.out.println("El resultado es: " + Pitagoras.Teorema(numA, numB));
                         break;
-                    
-                    
+
                     case 3:
                         System.out.println("Elige entre los siguientes polígonos para conocer su área: ");
                         System.out.println("Cuadrado (1), triángulo (2),círculo (3),hexágono(4),rectángulo (5)");
@@ -152,8 +152,8 @@ public class Supercalculadora {
                                 numA = s.nextInt();
                                 System.out.println(" Escribe el segundo valor: ");
                                 numB = s.nextInt();
-                                System.out.println("El resultado es: "+ ecuaciones.ecuacion1(numA, numB));
-                               
+                                System.out.println("El resultado es: " + ecuaciones.ecuacion1(numA, numB));
+
                                 break;
 
                             case 2:
@@ -165,18 +165,16 @@ public class Supercalculadora {
                                 System.out.println(" Escribe el tercer valor: ");
                                 numC = s.nextInt();
 
-                                System.out.println( "El resultado es: "+ ecuaciones.ecuacion2(numA, numB,numC));
-                                
+                                System.out.println("El resultado es: " + ecuaciones.ecuacion2(numA, numB, numC));
+
                                 break;
 
-                                /** Fin codificación:RMA 17/02/2022 **/
-                                /** Fin codificación:LAE 10/02/2022 **/
-                             default:
-                             System.out.println("Lo siento, no has introducido un valor correcto.");
+                            /** Fin codificación:RMA 17/02/2022 **/
+                            /** Fin codificación:LAE 10/02/2022 **/
+                            default:
+                                System.out.println("Lo siento, no has introducido un valor correcto.");
 
                         }
-                       
-
                 }
 
             }
