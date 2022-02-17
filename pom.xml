@@ -42,11 +42,8 @@
     <artifactId>commons-cli</artifactId>
     <version>1.5.0</version>
 </dependency>
-<<<<<<< HEAD
   </dependencies>
-=======
-</dependencies>
->>>>>>> f5897fd (cambios)
+
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
