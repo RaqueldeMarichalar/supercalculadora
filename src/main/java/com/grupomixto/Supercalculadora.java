@@ -10,7 +10,7 @@ public class Supercalculadora {
 
         try (Scanner s = new Scanner(System.in)) {
             // Variables
-
+            double Ec1,Ec2,Ec3;
             int numA, numB, numC;
             String signo;
             int opcion = 0, opcionEcuaciones = 0, opcionPoligonos = 0;
@@ -148,24 +148,23 @@ public class Supercalculadora {
 
                             case 1:
 
-                                System.out.println(" Escribe el primer valor: ");
-                                numA = s.nextInt();
+                                System.out.println("Escribe el primer valor: ");
+                                Ec1 = s.nextDouble();
                                 System.out.println(" Escribe el segundo valor: ");
-                                numB = s.nextInt();
-                                System.out.println("El resultado es: " + ecuaciones.ecuacion1(numA, numB));
+                                Ec2= s.nextDouble();
+                                System.out.println("El resultado es: " + ecuaciones.ecuacion1(Ec1,Ec2));
 
                                 break;
 
                             case 2:
 
                                 System.out.println(" Escribe el primer valor: ");
-                                numA = s.nextInt();
+                                Ec1 = s.nextDouble();
                                 System.out.println(" Escribe el segundo valor: ");
-                                numB = s.nextInt();
+                                Ec2 = s.nextDouble();
                                 System.out.println(" Escribe el tercer valor: ");
-                                numC = s.nextInt();
-
-                                System.out.println("El resultado es: " + ecuaciones.ecuacion2(numA, numB, numC));
+                                Ec3 = s.nextDouble();
+                                ecuaciones.ecuacion2(Ec1, Ec2, Ec3);
 
                                 break;
 
