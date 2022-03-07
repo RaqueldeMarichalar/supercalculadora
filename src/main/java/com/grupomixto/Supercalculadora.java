@@ -2,6 +2,8 @@ package com.grupomixto;
 
 import java.util.Scanner;
 
+import com.Logaritmo;
+
 /** Inicio codificación: RMA 10/02/2022 **/
 
 public class Supercalculadora {
@@ -10,6 +12,7 @@ public class Supercalculadora {
 
         try (Scanner s = new Scanner(System.in)) {
             // Variables
+            double numero;
             double Ec1, Ec2, Ec3;
             int numA, numB;
             String signo;
@@ -26,6 +29,7 @@ public class Supercalculadora {
                 System.out.println("2-> Teorema de Pitágoras");
                 System.out.println("3-> Área de Polígonos Regulares");
                 System.out.println("4-> Resolución de Ecuaciones");
+                System.out.println("6-> Función de Logaritmo");
                 System.out.println("5->Salir");
                 opcion = s.nextInt();
 
@@ -170,8 +174,11 @@ public class Supercalculadora {
 
                             /** Fin codificación:RMA 17/02/2022 **/
                             /** Fin codificación:LAE 10/02/2022 **/
-                            default:
-                                System.out.println("Lo siento, no has introducido un valor correcto.");
+                            case 6:
+
+                                System.out.println("Introduce un número para conocer su algoritmo:");
+                                numero = s.nextDouble();
+                                System.out.println("El resultado es: " + Logaritmo.loga(numero));
 
                         }
                 }
